@@ -1,1 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=PT+Sans+Narrow&family=Sansita&family=Short+Stack&display=swap');
+
+body {
+    margin:0 auto;
+    padding:0;
+    
+
+}
+#container {
+    text-align: center;
+    background-color: darkgrey;
+    width: 1100px;
+}
+
+h1 {
+    padding: 20px;
+    display:block;
+    background:green;
+    font-size: 4rem;
+    text-align: center;
+}
+
+#gameZone {
+    width:1100px;
+    border: 1px solid;
+
+}
+
+button {
+    width:250px;
+    height: 350px;
+}
