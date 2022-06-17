@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Footy Quiz - who scored the had of God goal? </title>
+    <title>Footy Quiz - who scored the hand of God goal? </title>
 
 </head>
+
 <body>
-<h1>Welcome To Footy Quiz , <span id="playerName">Player</span>!</h1>
 
-<div class="gameZone">
-    <button class="images"></button>
-    <button class="images"></button>
-    <button class="images"></button>
-    <button class="images"></button>
+    <!-- Welcome title for the page -->
+    <h1>Welcome To Footy Quiz , <span id="playerName">Player</span>!</h1>
 
-    <h3 id="question"></h2>
-        <div id="keepScore">
-            SquareIcon+ SquareIcon- SquareIconSubmit answer/playAgain 
-        </div>
+    <!-- Container for the main content  -->
+<div id="container">
+
+    <!-- Game zone where the content of the questions will be -->
+    <div class="gameZone">
+        <button class="images"></button>
+        <button class="images"></button>
+        <button class="images"></button>
+        <button class="images"></button>
+
+        <h3 id="question">Who is the world champion of WC 2018?
+            </h3>
+
+            <!-- Where the score is kept and registered -->
+            <div id="keepScore">
+                SquareIcon+ SquareIcon- SquareIconSubmit answer/playAgain
+            </div>
+    </div>
+    <!-- Highscore for the players -->
+    <div id="highScore">
+
+    </div>
+    <!-- Possibility for players to share feedback and suggest additional questions -->
+    <div id="addNewQuestion">
+        <form action="post">
+            <label for="newQuestion"></label>
+            <textarea name="" id="newQuestion" cols="30" rows="10"
+                placeholder="How many players do you at least need to play football 11vs11?"></textarea>
+        </form>
+
+    </div>
 </div>
-<div id="highScore">
 
-</div>
-<div id="newQuestion">
-    <form action="post">
-        <label for="newQuestion"></label>
-        <textarea name="" id="newQuestion" cols="30" rows="10" placeholder="How many players do you at least need to play football 11vs11?"></textarea>
-    </form>
-    
-</div>
-
-    
-<script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
