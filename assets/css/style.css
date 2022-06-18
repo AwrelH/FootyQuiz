@@ -7,26 +7,34 @@
   margin: 0;
   padding: 0;
 
+  font-family:Kanita, "PT Sans Narrow", Sansita, sans-serif;
 }
 body {
+    
     
     
 
 }
 #container {
     text-align: center;
-    background-color: darkgrey;
+    background-color: hsl(15, 57%, 72%);
     max-width: 1100px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
     
 }
 
 h1 {
     padding: 20px;
     display:block;
-    background:green;
+    
     font-size: 4rem;
     text-align: center;
+    background-image: url(../images/banner-image.webp);
+    background-position: bottom;
+    background-repeat:no-repeat;
+    background-position: cover;
 }
 
 #gameZone {
@@ -90,3 +98,21 @@ h1 {
 .wrong{
     color:hsl(330, 88%, 40%)
 }
+ #highScore {
+    text-align: left;
+    min-width: 231px;
+    max-width: 40ch;
+    min-height: 5rem;
+    border: inset 5px solid rgb(144, 123, 238);
+    background:  hsl(15, 33%, 77%);
+    margin-left: 2rem;
+    margin: 0 auto;
+    list-style-position: inside;
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+
+ }
+ ol > li::marker {
+    font-weight: 700;
+  }
