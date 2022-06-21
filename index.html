@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2ae8405b0b.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
     <title>Footy Quiz - who scored the hand of God goal? </title>
 
 </head>
 
-<body>
+<body  onload="askName()">
 
     <!-- Welcome title for the page -->
     <h1>Welcome To Footy Quiz , <span id="playerName">Player</span>!</h1>
@@ -26,20 +25,22 @@
 
         <!-- Game zone where the content of the questions will be -->
         <div class="gameZone">
-            <button class="questionImages"></button>
-            <button class="questionImages"></button>
-            <button class="questionImages"></button>
-            <button class="questionImages"></button>
-
+            <div id="answerContainer">
+                <button class="questionImages"></button>
+                <button class="questionImages"></button>
+                <button class="questionImages"></button>
+                <button class="questionImages"></button>
+            </div>
             <h3 id="question">Who is the world champion of WC 2018?
-               
-                </h3>
+
+            </h3>
 
             <!-- Where the score is kept and registered -->
             <div id="keepScore">
-                <span id="rightAnswers"> 0   </span> 
-                <span id="wrongAnswers"> 0   </span>
-                <button id="submit" type="submit">Is that your final answer?</button>
+                <button id="submit" type="submit" onclick="askName()">CLICK HERE to type your player name</button>
+                <span id="rightAnswers"> 0 </span>
+                <span id="wrongAnswers"> 0 </span>
+                
                 <button type="reset" id="restart">Restart</button>
 
 
@@ -47,7 +48,8 @@
         </div>
         <!-- Highscore for the players -->
         <div id="highScore">
-            <ol><h3>Highscores</h3>
+            <ol>
+                <h3>Highscores</h3>
                 <span id="rank"></span>
                 <li>Player1: 40p</li>
                 <li>Player2: 35p</li>
@@ -63,13 +65,15 @@
             <form action="post">
                 <label for="newQuestion"></label>
                 <textarea name="" id="newQuestion" cols="30" rows="10"
-                    placeholder="How many players do you at least need to play football 11vs11?"></textarea>
+                    placeholder="Feel free to suggest new questions or give feedback about the game"></textarea> <br>
+                    <button id="submitNewQuestion" type="submit">Suggest question now!</button>
             </form>
 
         </div>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js">
+            </script>
 </body>
 
 </html>
