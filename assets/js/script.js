@@ -1,27 +1,9 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 document.addEventListener('DOMContentLoaded', function () {
-let playerName = prompt('Please Type your player name?', 'Player');
-    if (input === null) {
-        playerName = 'Player'; //If player cancel adding name, player will be the name
-    }
     
+ let playerName = prompt('Please Type your player name?', 'Player');
     document.getElementById('playerName').innerHTML = playerName;
-
-    let buttons = document.getElementsByTagName('button');
-
-    for (let button of buttons) {
-        button.addEventListener('click', function(){
-            if (this.getAttribute('id') === 'restart') {
-                alert('you clicked on restart');
-            } else {
-                let option = this.getAttribute('id');
-                alert(`you clicked ${option}`);
-            }
-        })
-    }
- 
-    
 })    
 
 function question() {
