@@ -1,5 +1,7 @@
+/* GoogleFonts */
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=PT+Sans+Narrow&family=Sansita&family=Short+Stack&display=swap');
 
+/* General styling */
 *,
 *::after,
 *::before {
@@ -9,11 +11,11 @@
     font-family: Kanita, "PT Sans Narrow", Sansita, sans-serif;
 }
 
-body {}
-
 #container {
     text-align: center;
     background-color: hsl(14.1, 13.4%, 75.1%);
+    padding: 40px 0px 40px;
+    height: 80vh;
 }
 
 h1 {
@@ -25,10 +27,11 @@ h1 {
     background-position: bottom;
     background-repeat: no-repeat;
     background-position: cover;
-    text-shadow: 4px 4px 4px aliceblue;
+    text-shadow: 4px 4px 4px hsl(208, 100%, 97%);
     font-weight: 800;
 }
 
+/* Game section */
 #gameZone {
     width: 1100px;
     border: 1px solid;
@@ -41,8 +44,9 @@ h1 {
 }
 
 #question {
-    margin: 20px 20px;
+    margin: 20px 0px 20px;
     font-size: 2rem;
+    background: hsl(39, 77%, 83%);
 }
 
 #rightAnswers,
@@ -106,10 +110,22 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
 ol>li::marker {
     font-weight: 700;
 }
 
+#submitNewQuestion {
+    padding: 5px;
+    font-size: 1.5rem;
+    background: hsl(330, 88%, 60%);
+}
+#submitNewQuestion:hover {
+    background: hsl(120, 88%, 60%);
+
+}
+
+/* __________ Media queries __________ */
 @media screen and (max-width: 900px) {
 
     h1 {
@@ -124,9 +140,11 @@ ol>li::marker {
         font-size: 2rem;
         padding: 5px;
     }
+
     h3 {
         font-size: 1.5rem;
     }
+
 
     .questionImages {
         width: 150px;
@@ -141,5 +159,14 @@ ol>li::marker {
     #keepScore {
         padding: 5px 5px 60px;
         flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .questionImages {
+        width: 130px;
+        height: 150px;
+        margin: 5px;
     }
 }
