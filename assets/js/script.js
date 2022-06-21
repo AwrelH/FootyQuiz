@@ -3,6 +3,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     let playerName = prompt('Please Type your player name?', 'Player');
+    if (input === null) {
+        playerName = 'Player'; //If player won't type name and cancels name will be Player
+    }
     document.getElementById('playerName').innerHTML = playerName;
 })
 
@@ -12,7 +15,10 @@ function question() {
 }
 const questions = [{
         question: 'Who is the world champion of WC 2018?',
-        'Which world cups did zlatan play?'
+
+    }, 
+    {
+        question: 'Which world cups did zlatan play?'
     },
     {
         question: 'Who missed the  last penalty in wc 1994?'
