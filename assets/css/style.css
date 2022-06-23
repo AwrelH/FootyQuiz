@@ -27,8 +27,9 @@ h1 {
     background-position: bottom;
     background-repeat: no-repeat;
     background-position: cover;
-    text-shadow: 4px 4px 4px hsl(208, 100%, 97%);
+    text-shadow: 2px 2px 2px hsl(330, 88%, 60%);
     font-weight: 800;
+    color: hsl(0, 0%, 100%)
 }
 
 /* Navbar */

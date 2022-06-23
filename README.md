@@ -91,9 +91,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 ### Known Bugs
 
--   On some mobile devices the Hero Image pushes the size of screen out more than any of the other content on the page.
-    -   A white gap can be seen to the right of the footer and navigation bar as a result.
--   On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed upwards when hovering over them.
+
 
 ## Deployment
 
@@ -102,8 +100,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 The project was deployed to GitHub Pages using the following steps...
 
 1. Go to GitHub and locate the [right repository](https://github.com/AwrelH/FootyQuiz)
-2. Go to settings on the menu.
-   
+2. Go to settings on the menu.  
 3. Click on "Pages" Section.
 4. Under "Source", change the dropdown option from "None" to "main".
 5. Save the changes and let github do its work.
@@ -123,8 +120,8 @@ The project was deployed to GitHub Pages using the following steps...
 ### Media
 
 -   All Images were sourced from.
-    https://iconarchive.com/ also some google image searches
-- https://coolors.co/ were used to make a palette for my readme.
-
+    https://iconarchive.com/ for most the flags
+    https://coolors.co/ were used to make a palette for my readme.
+    google image searches
 ### Acknowledgements
 

@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       question: "What team came third in the world cup 2002?",
       answers: {
         a: "Turkey <img src='../assets/images/q-images/turkey.png'>",
-      b: "South Korea <img src='../assets/images/q-images/southkorea.png'>",
+      b: "South Korea <img src='../assets/images/q-images/southKorea.png'>",
       c: "Mexico <img src='../assets/images/q-images/mexico.png'>",
       d: "Spain <img src='../assets/images/q-images/spain.png'>",
       },
