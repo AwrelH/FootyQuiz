@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       question: "Who is the world champion of WC 2018?",
       answers: {
-        a: "Croatia <img src='../assets/images/q-images/croatia.png'>",
+        a: "Croatia <img src='assets/images/q-images/croatia.png'>",
       b: "Spain <img src='../assets/images/q-images/spain.png'>",
       c: "Brazil <img src='../assets/images/q-images/brazil.png'>",
       d: "France <img src='../assets/images/q-images/france.png'>",
