@@ -15,7 +15,7 @@
     text-align: center;
     background-color: hsl(14.1, 13.4%, 75.1%);
     padding: 40px 0px 40px;
-    height: 80vh;
+    height: 86vh;
 }
 
 h1 {
@@ -30,28 +30,33 @@ h1 {
     text-shadow: 4px 4px 4px hsl(208, 100%, 97%);
     font-weight: 800;
 }
+
 /* Navbar */
 nav {
     display: flex;
     justify-content: end;
     position: absolute;
-    right:0;
+    right: 0;
 
 }
+
 nav li {
     list-style-type: none;
     font-size: 1.5rem;
     margin-right: 20px;
 }
+
 nav a {
     text-decoration: none;
-    padding:5px;
-    text-transform:uppercase;
+    padding: 5px;
+    text-transform: uppercase;
 }
+
 /* keep a black color on clicked navlink */
 nav a:visited {
     color: black;
 }
+
 nav li:hover {
     background: white;
     letter-spacing: 1px;
@@ -62,12 +67,14 @@ nav li:hover {
     width: 1100px;
     border: 1px solid;
 }
+
 #answerContainer {
-    margin-top:40px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 /* the answer buttons */
 .answer {
     width: 250px;
@@ -79,12 +86,17 @@ nav li:hover {
     justify-content: space-around;
     align-items: center;
 }
+
+.answer:hover {
+    transform: rotate(-8deg);
+}
+
 /* the question bar below the answer buttons */
 #question {
     margin: 20px 0px 20px;
     font-size: 2rem;
     background: hsl(39, 77%, 83%);
-    padding:10px;
+    padding: 10px;
 }
 
 #rightAnswers,
@@ -93,7 +105,7 @@ nav li:hover {
     width: 50px;
     height: 2rem;
     align-items: center;
-    border: 4px inset grey;
+    border: 4px inset hsl(0, 0%, 50%);
     padding: 10px;
     justify-content: center;
     margin: 5px;
@@ -114,6 +126,7 @@ nav li:hover {
     align-items: center;
     font-size: 3rem;
 }
+
 img {
     max-width: 77px;
     aspect-ratio: 1/1;
@@ -124,8 +137,9 @@ img {
 #submit {
     padding: 10px;
     margin: 10px;
-    border: inset 1px solid red;
+    border: 4px inset hsl(0, 0%, 50%);
     font-size: 1.5rem;
+    height: 2rem;
 }
 
 .fa-solid {
@@ -145,11 +159,16 @@ ol>li::marker {
     font-weight: 700;
 }
 
+.formtitle {
+    font-size: 2rem;
+}
+
 #submitNewQuestion {
     padding: 5px;
     font-size: 1.5rem;
     background: hsl(330, 88%, 60%);
 }
+
 #submitNewQuestion:hover {
     background: hsl(120, 88%, 60%);
 
