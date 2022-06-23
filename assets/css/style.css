@@ -62,12 +62,22 @@ nav li:hover {
     width: 1100px;
     border: 1px solid;
 }
+#answerContainer {
+    margin-top:40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 /* the answer buttons */
 .answer {
     width: 250px;
-    height: 3rem;
+    height: 5rem;
     margin: 5px;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 /* the question bar below the answer buttons */
 #question {
@@ -104,6 +114,11 @@ nav li:hover {
     align-items: center;
     font-size: 3rem;
 }
+img {
+    max-width: 77px;
+    aspect-ratio: 1/1;
+}
+
 
 #restart,
 #submit {
@@ -125,19 +140,6 @@ nav li:hover {
     color: hsl(330, 88%, 40%)
 }
 
-#highScore {
-    text-align: left;
-    min-height: 5rem;
-    border:  5px inset  hsl(15, 33%, 77%);
-    background: hsl(15, 33%, 77%);
-    list-style-position: inside;
-    margin-bottom: 20px;
-    line-height: 1.5rem;
-    letter-spacing: 2px;
-    padding-left: 20px;
-    display: flex;
-    justify-content: center;
-}
 
 ol>li::marker {
     font-weight: 700;

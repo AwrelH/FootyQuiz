@@ -2,77 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2ae8405b0b.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-
-    <title>Footy Quiz - who scored the hand of God goal? </title>
-
+    <title>Footy Quiz - who scored the hand of God goal?</title>
 </head>
 
 <body>
-
     <!-- Welcome title for the page -->
     <h1>Welcome To Footy Quiz, <span id="playerName">Player</span>!</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Container for the main content  -->
     <div id="container">
-
         <!-- Game zone where the content of the questions will be -->
         <div class="gameZone">
             <div id="answerContainer">
-                <button  id="optionA" class="answer">Answer 1</button>
-                <button  id="optionB" class="answer">Answer 2</button>
-                <button  id="optionC" class="answer">Answer 3</button>
-                <button  id="optionD" class="answer">Answer 4</button>
+                <button id="optionA" class="answer" onclick="answered('a')">
+                    Answer 1
+                </button>
+                <button id="optionB" class="answer" onclick="answered('b')">
+                    Answer 2
+                </button>
+                <button id="optionC" class="answer" onclick="answered('c')">
+                    Answer 3
+                </button>
+                <button id="optionD" class="answer" onclick="answered('d')">
+                    Answer 4
+                </button>
             </div>
-            <h3 id="question">Who is the world champion of WC 2018?
-
-            </h3>
+            <!-- The question row that needs to be answered -->
+            <h3 id="question">Are you ready for a World Cup quiz?</h3>
 
             <!-- Where the score is kept and registered -->
             <div id="keepScore">
                 <span id="rightAnswers">0</span>
                 <span id="wrongAnswers">0</span>
-                
-                <button type="reset" id="restart">Restart</button>
 
-
+                <button type="reset" id="restart" onclick="location.reload();">Restart</button>
             </div>
         </div>
-        <!-- Highscore for the players -->
-        <div id="highScore">
-            <ol>
-                <h3>Highscores</h3>
-                <span id="rank"></span>
-                <li>Player1: 40p</li>
-                <li>Player2: 35p</li>
-                <li>Player3: 30p</li>
-                <li>Player4: 20p</li>
-                <li>Player5: 5p</li>
 
-            </ol>
-            <p id="playerRanking"></p>
-        </div>
-        <!-- Possibility for players to share feedback and/or suggest additional questions -->
-        <div id="addNewQuestion">
-            <form action="post">
-                <label for="newQuestion"></label>
-                <textarea name="" id="newQuestion" cols="30" rows="10"
-                    placeholder="Feel free to suggest new questions or give feedback about the game" required></textarea> <br>
-                    <button id="submitNewQuestion" type="submit">Suggest question now!</button>
-            </form>
 
-        </div>
     </div>
 
-    <script src="assets/js/script.js">
-            </script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
