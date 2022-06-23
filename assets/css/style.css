@@ -30,6 +30,32 @@ h1 {
     text-shadow: 4px 4px 4px hsl(208, 100%, 97%);
     font-weight: 800;
 }
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right:0;
+
+}
+nav li {
+    list-style-type: none;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+nav a {
+    text-decoration: none;
+    padding:5px;
+    text-transform:uppercase;
+}
+/* keep a black color on clicked navlink */
+nav a:visited {
+    color: black;
+}
+nav li:hover {
+    background: white;
+    letter-spacing: 1px;
+}
 
 /* Game section */
 #gameZone {
@@ -102,7 +128,7 @@ h1 {
 #highScore {
     text-align: left;
     min-height: 5rem;
-    border: inset 5px solid rgb(144, 123, 238);
+    border:  5px inset  hsl(15, 33%, 77%);
     background: hsl(15, 33%, 77%);
     list-style-position: inside;
     margin-bottom: 20px;
