@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       question: "Who missed the  last penalty in wc 1994?",
       answers: {
-        a: "Romario <img src='assets/images/q-images/romario.png'>",
+        a: "Romario <img alt='romario' src='assets/images/q-images/romario.png'>",
       b: "Costacurta <img src='assets/images/q-images/costacurta.png'>",
       c: "Robert Baggio <img src='assets/images/q-images/baggio.png'>",
       d: "Ravanelli <img src='assets/images/q-images/ravanelli.png'>",
@@ -91,10 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       question: "What team came third in the world cup 2002?",
       answers: {
-        a: "Turkey <img src='assets/images/q-images/turkey.png'>",
-      b: "South Korea <img src='assets/images/q-images/southKorea.png'>",
-      c: "Mexico <img src='assets/images/q-images/mexico.png'>",
-      d: "Spain <img src='assets/images/q-images/spain.png'>",
+        a: "Turkey <img alt='flag of turkey' src='assets/images/q-images/turkey.png'>",
+      b: "South Korea <img alt='flag of south korea' src='assets/images/q-images/southKorea.png'>",
+      c: "Mexico <img alt='flag of mexico' src='assets/images/q-images/mexico.png'>",
+      d: "Spain <img alt='flag of spain' src='assets/images/q-images/spain.png'>",
       },
       correctAnswer: "a",
     },
@@ -132,20 +132,20 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       question: "Where will the world cup be played 2022?",
       answers: {
-        a: "England <img src='assets/images/q-images/england.png'>",
-        b: "France <img src='assets/images/q-images/france.png'>",
-        c: "Qatar <img src='assets/images/q-images/qatar.png'>",
-        d: "Australia <img src='assets/images/q-images/australia.png'>",
+        a: "England <img alt='flag of england' src='assets/images/q-images/england.png'>",
+        b: "France <img alt='flag of france' src='assets/images/q-images/france.png'>",
+        c: "Qatar <img alt='flag of qatar' src='assets/images/q-images/qatar.png'>",
+        d: "Australia <img alt='flag of australia' src='assets/images/q-images/australia.png'>",
       },
       correctAnswer: "c",
     },
     {
       question: "What is the name of Maradonas famous goal against",
       answers: {
-        a: "Foot of God <img src='assets/images/q-images/foot.png'>",
-      b: "Chest of God <img src='assets/images/q-images/chest.png'>",
-      c: "Hand of God <img src='assets/images/q-images/hand.png'>",
-      d: "Head of God <img src='assets/images/q-images/head.png'>",
+        a: "Foot of God <img alt='a foot' src='assets/images/q-images/foot.png'>",
+      b: "Chest of God <img alt='a hairy chest' src='assets/images/q-images/chest.png'>",
+      c: "Hand of God <img alt='a hand' src='assets/images/q-images/hand.png'>",
+      d: "Head of God <img alt='a head' src='assets/images/q-images/head.png'>",
       },
       correctAnswer: "c",
     },
