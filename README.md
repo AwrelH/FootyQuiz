@@ -69,11 +69,15 @@ This is a football quiz for the fans of the biggest sport in the world.
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate the pages of the project and make sure code is correct. Also JShint was used to validate the javascript. 
+The W3C Markup Validator and W3C CSS Validator Services were used to validate the pages of the project and make sure code is correct. Also JSHint was used to validate the JavaScript. And Chrome Lighthouse was used aswell.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - no errors were found doing test.
 
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - one error were found regarding background-position that was applied twice within one selector. 
+
+- [JSHint code quality tool](https://jigsaw.w3.org/css-validator/#validate_by_input) - COMMENT.
+
+- Lighthouse
 #
 ## index.html
     
@@ -85,7 +89,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 - 
 ### Further Testing
 
--   The Website was tested on Google Chrome, and Microsoft Edge.
+-   The Website was tested on Mozilla Firefox, Google Chrome, and Microsoft Edge.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, and phone and pad set up that is available on the developer tools in these browsers. 
 -   
 
