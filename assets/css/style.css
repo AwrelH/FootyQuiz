@@ -11,11 +11,15 @@
     font-family: Kanita, "PT Sans Narrow", Sansita, sans-serif;
 }
 
+body {
+    background-color: hsl(14.1, 13.4%, 75.1%);
+    
+}
+
 #container {
     text-align: center;
-    background-color: hsl(14.1, 13.4%, 75.1%);
     padding: 40px 0px 40px;
-    height: 86vh;
+
 }
 
 h1 {
@@ -26,12 +30,13 @@ h1 {
     background-image: url(../images/banner-image.webp);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-position: cover;
+
     text-shadow: 2px 2px 2px hsl(330, 88%, 60%);
     font-weight: 700;
     color: hsl(0, 0%, 100%);
     font-family: sans-serif;
 }
+
 #playerName {
     color: hsl(330, 88%, 60%);
     text-shadow: 2px 2px 2px hsl(0, 0%, 100%);
@@ -181,8 +186,27 @@ ol>li::marker {
     background: hsl(120, 88%, 60%);
 
 }
+
 #restart:hover {
     border: 4px inset hsl(330, 79%, 15%);
+}
+
+/* __________ contact.html ___________ */
+.field {
+    margin-bottom: 10px;
+}
+
+.field label {
+
+    font-size: 12px;
+    color: #777;
+}
+
+.field input {
+
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
 /* __________ Media queries __________ */
@@ -192,6 +216,7 @@ ol>li::marker {
         font-size: 2.5rem;
         padding: 5px;
     }
+
     #container {
         padding: 10px 0px 40px;
     }
@@ -219,6 +244,7 @@ ol>li::marker {
         padding: 5px 5px 60px;
         flex-wrap: wrap;
     }
+
     /* Remove the rotation because doesn't work well on screen of small sizes */
     .answer:hover {
         transform: none;
