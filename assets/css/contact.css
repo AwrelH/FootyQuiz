@@ -1,13 +1,84 @@
 /* GoogleFonts */
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=PT+Sans+Narrow&family=Sansita&family=Short+Stack&display=swap');
 
+/* General styling */
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: Kanita, "PT Sans Narrow", Sansita, sans-serif;
+}
+body {
+  background-color: hsl(14.1, 13.4%, 75.1%);
+}
+p {
+  text-align: center;
+  font-size: large;
+  
+}
+
+h1 {
+        display: block;
+      padding:20px;  
+    font-size: 4rem;
+    text-align: center;
+    background-image: url(../images/banner-image.webp);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-position: cover;
+    text-shadow: 2px 2px 2px hsl(330, 88%, 60%);
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    font-family: sans-serif;
+    min-height: 10vh;
+}
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: 0;
+
+}
+
+nav li {
+  list-style-type: none;
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+/* keep a black color on clicked navlink */
+nav a:visited {
+  color: black;
+}
+
+nav li:hover {
+  background: white;
+  letter-spacing: 1px;
+}
+
+#container {
+  padding-top:20px;
+  display:flex;
+  justify-content: center;
+  justify-items: center;
+}
 .field {
   margin-bottom: 10px;
+  
 }
 
 .field label {
   display: block;
-  font-size: 12px;
+  font-size: 1.5rem;
   color: #777;
 }
 
@@ -15,14 +86,30 @@
   display: block;
   min-width: 250px;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 1.5rem;
+
+} 
+textarea {
+  min-width: 250px;
 }
 
 input[type="submit"] {
   display: block;
-  padding: 6px 30px;
-  font-size: 14px;
-  background-color: #4460AA;
-  color: #fff;
-  border: none
+ 
+  font-size: 1rem;
+  
+
+ 
+}
+
+input[type="submit"] {
+  padding: 10px;
+  font-size: 1.5rem;
+  background: hsl(330, 56%, 48%);
+
+}
+
+input[type="submit"]:hover {
+  background: hsl(120, 56%, 48%);
+
 }
