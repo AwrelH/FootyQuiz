@@ -9,8 +9,33 @@
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2ae8405b0b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- emailjs input -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        let btn = document.getElementById('button');
+    </script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('FhOOQCjv2MlhNPMeg');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('form').addEventListener('submit', function (event) {
+                event.preventDefault();
 
 
+
+                emailjs.sendForm('service_pxelf4c', 'template_sc17bld', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        alert('Your message have been sent!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <title>Footy Quiz - who scored the hand of God goal? </title>
 
 </head>
@@ -29,50 +54,31 @@
     </header>
     <!-- Possibility for players to share feedback and/or suggest additional questions -->
     <div id="container">
+        <form id="form">
+           
+            <div class="field">
+                <label for="from_name">name</label>
+                <input type="text" name="from_name" id="from_name">
+            </div>
+            <div class="field">
+                <label for="message">message</label>
+                <input type="text" name="message" id="message">
+            </div>
+          
 
-        <!-- <form>
-                <label class="formtitle" for="newQuestion">How was the quiz?</label><br>
-                <textarea name="" id="newQuestion" cols="35" rows="12"
-                    placeholder="Feel free to suggest new questions or give feedback about the game"
-                    required></textarea> <br>
-                <button id="submitNewQuestion" type="submit">Suggest question now!</button>
-            </form> -->
+            <input type="submit" id="button" value="Send Email">
+        </form>
 
-            <form id="form">
-                <div class="field">
-                  <label for="to_name">to_name</label>
-                  <input type="text" name="to_name" id="to_name">
-                </div>
-                <div class="field">
-                  <label for="from_name">from_name</label>
-                  <input type="text" name="from_name" id="from_name">
-                </div>
-                <div class="field">
-                  <label for="message">message</label>
-                  <input type="text" name="message" id="message">
-                </div>
-                <div class="field">
-                  <label for="reply_to">reply_to</label>
-                  <input type="text" name="reply_to" id="reply_to">
-                </div>
-              
-                <input type="submit" id="button" value="Send Email" >
-              </form>
 
 
 
     </div>
 
 
-    </div>
 
 
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  
-    <script type="text/javascript">
-        emailjs.init('FhOOQCjv2MlhNPMeg')
-      </script>
+
+
 
 
 </body>
