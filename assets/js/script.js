@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       question: "Who is the world champion of WC 2018?",
       answers: {
-        a: "Croatia <img src='assets/images/q-images/croatia.png'>",
-      b: "Spain <img src='assets/images/q-images/spain.png'>",
-      c: "Brazil <img src='assets/images/q-images/brazil.png'>",
-      d: "France <img src='assets/images/q-images/france.png'>",
+        a: "Croatia <img alt='flag of croatia' src='assets/images/q-images/croatia.png'>",
+      b: "Spain <img alt='flag of spain' src='assets/images/q-images/spain.png'>",
+      c: "Brazil <img alt='flag of brazil' src='assets/images/q-images/brazil.png'>",
+      d: "France <img alt='flag of france' src='assets/images/q-images/france.png'>",
       },
       correctAnswer: "d",
     },
