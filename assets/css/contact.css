@@ -5,33 +5,36 @@
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-    font-family: Kanita, "PT Sans Narrow", Sansita, sans-serif;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: Kanita, "PT Sans Narrow", Sansita, sans-serif;
 }
+
 body {
   background-color: hsl(14.1, 13.4%, 75.1%);
 }
+
 p {
   text-align: center;
   font-size: 1.5rem;
 }
 
 h1 {
-        display: block;
-    font-size: 4rem;
-    text-align: center;
-    background-image: url(../images/bannerball.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-position: cover;
-    text-shadow: 2px 2px 2px hsl(330, 88%, 60%);
-    font-weight: 700;
-    color: hsl(0, 0%, 100%);
-    font-family: sans-serif;
-    min-height: 10vh;
+  display: block;
+  font-size: 4rem;
+  text-align: center;
+  background-image: url(../images/bannerball.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-position: cover;
+  text-shadow: 2px 2px 2px hsl(330, 88%, 60%);
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  font-family: sans-serif;
+  min-height: 10vh;
 }
+
 /* Navbar */
 nav {
   display: flex;
@@ -39,7 +42,6 @@ nav {
   position: relative;
   right: 0;
   top: -31px;
-
 }
 
 nav li {
@@ -55,10 +57,10 @@ nav a {
   text-transform: uppercase;
   text-shadow: 2px 2px 2px hsl(330, 88%, 60%);
   color: white;
-    font-weight: 700;
+  font-weight: 700;
 }
 
-/* keep a black color on clicked navlink */
+/* keep a white color on clicked navlink */
 nav a:visited {
   color: white;
 }
@@ -69,33 +71,29 @@ nav li:hover {
 }
 
 #container {
-  padding-top:20px;
-  
+  padding-top: 20px;
+}
 
-}
 form {
-text-align: center;
- 
+  text-align: center;
 }
+
 .field {
   margin-bottom: 10px;
-  
-
-  
 }
 
 .field label {
- display: block;
+  display: block;
   font-size: 1.3rem;
   color: #777;
 }
 
 .field input {
-   max-width: 250px;
+  max-width: 250px;
   line-height: 1.5;
   font-size: 1.5rem;
+}
 
-} 
 textarea {
   max-width: 250px;
 }
@@ -113,29 +111,8 @@ input[type="submit"]:hover {
 @media screen and (max-width: 600px) {
 
   h1 {
-      font-size: 2rem;
-  
-  }
-
-  h3 {
-      font-size: 1.5rem;
-  }
-
-
-  .questionImages {
-      width: 150px;
-      height: 150px;
-      margin: 5px;
-  }
-
-  #keepScore {
-      padding: 5px 5px 60px;
-      flex-wrap: wrap;
-  }
-
-  /* Remove the rotation because doesn't work well on screen of small sizes */
-  .answer:hover {
-      transform: none;
+    font-size: 2rem;
+    min-height: 5vh;
   }
 
 }
