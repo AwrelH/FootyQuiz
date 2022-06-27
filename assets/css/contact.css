@@ -15,16 +15,14 @@ body {
 }
 p {
   text-align: center;
-  font-size: large;
-  
+  font-size: 1.5rem;
 }
 
 h1 {
         display: block;
-      padding:20px;  
     font-size: 4rem;
     text-align: center;
-    background-image: url(../images/banner-image.webp);
+    background-image: url(../images/bannerball.png);
     background-position: bottom;
     background-repeat: no-repeat;
     background-position: cover;
@@ -38,8 +36,9 @@ h1 {
 nav {
   display: flex;
   justify-content: end;
-  position: absolute;
+  position: relative;
   right: 0;
+  top: -31px;
 
 }
 
@@ -47,69 +46,96 @@ nav li {
   list-style-type: none;
   font-size: 1.5rem;
   margin-right: 20px;
+  width: 100%;
 }
 
 nav a {
   text-decoration: none;
   padding: 5px;
   text-transform: uppercase;
+  text-shadow: 2px 2px 2px hsl(330, 88%, 60%);
+  color: white;
+    font-weight: 700;
 }
 
 /* keep a black color on clicked navlink */
 nav a:visited {
-  color: black;
+  color: white;
 }
 
 nav li:hover {
-  background: white;
+  background: hsl(0, 0%, 0%);
   letter-spacing: 1px;
 }
 
 #container {
   padding-top:20px;
-  display:flex;
-  justify-content: center;
-  justify-items: center;
+  
+
+}
+form {
+text-align: center;
+ 
 }
 .field {
   margin-bottom: 10px;
   
+
+  
 }
 
 .field label {
-  display: block;
-  font-size: 1.5rem;
+ display: block;
+  font-size: 1.3rem;
   color: #777;
 }
 
 .field input {
-  display: block;
-  min-width: 250px;
+   max-width: 250px;
   line-height: 1.5;
   font-size: 1.5rem;
 
 } 
 textarea {
-  min-width: 250px;
-}
-
-input[type="submit"] {
-  display: block;
- 
-  font-size: 1rem;
-  
-
- 
+  max-width: 250px;
 }
 
 input[type="submit"] {
   padding: 10px;
   font-size: 1.5rem;
   background: hsl(330, 56%, 48%);
-
 }
 
 input[type="submit"]:hover {
   background: hsl(120, 56%, 48%);
+}
+
+@media screen and (max-width: 600px) {
+
+  h1 {
+      font-size: 2rem;
+  
+  }
+
+  h3 {
+      font-size: 1.5rem;
+  }
+
+
+  .questionImages {
+      width: 150px;
+      height: 150px;
+      margin: 5px;
+  }
+
+  #keepScore {
+      padding: 5px 5px 60px;
+      flex-wrap: wrap;
+  }
+
+  /* Remove the rotation because doesn't work well on screen of small sizes */
+  .answer:hover {
+      transform: none;
+  }
 
 }
