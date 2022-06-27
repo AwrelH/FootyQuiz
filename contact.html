@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/contact.css">
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/2ae8405b0b.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- emailjs input -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
         let btn = document.getElementById('button');
@@ -23,8 +21,6 @@
         window.onload = function () {
             document.getElementById('form').addEventListener('submit', function (event) {
                 event.preventDefault();
-
-
 
                 emailjs.sendForm('service_pxelf4c', 'template_sc17bld', this)
                     .then(function () {
@@ -42,10 +38,9 @@
 
 <body>
 
-
     <!-- Welcome title for the page -->
     <h1>Footy Quiz!</h1>
-    <p>How was your overall experience of the game? Let us know!</p>
+   
     <header>
         <nav>
             <ul>
@@ -55,33 +50,24 @@
     </header>
     <!-- Possibility for players to share feedback and/or suggest additional questions -->
     <div id="container">
-        
+ <p>How was your game experience? Let us know!</p>
+
         <form id="form">
-           
+
             <div class="field">
                 <label for="from_name">name</label>
-                <input type="text" name="from_name" id="from_name">
+                <input type="text" name="from_name" id="from_name" required>
             </div>
+
             <div class="field">
                 <label for="message">message</label>
                 <textarea id="message" cols="30" rows="10" required></textarea>
             </div>
-          
 
             <input type="submit" id="button" value="Send Message">
         </form>
 
-
-
-
     </div>
-
-
-
-
-
-
-
 
 </body>
 
