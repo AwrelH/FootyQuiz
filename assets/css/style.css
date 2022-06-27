@@ -12,14 +12,12 @@
 }
 
 body {
-    background-color: hsl(14.1, 13.4%, 75.1%);
-    
+    background-color: hsl(14.1, 13.4%, 75.1%); 
 }
 
 #container {
     text-align: center;
-    padding: 40px 0px 40px;
-
+    padding: 30px 0px 40px;
 }
 
 h1 {
@@ -42,33 +40,39 @@ h1 {
     text-shadow: 2px 2px 2px hsl(0, 0%, 100%);
 }
 
-/* Navbar */
-nav {
+/* footer */
+footer {
     display: flex;
     justify-content: end;
     position: absolute;
+    bottom: 10px;
     right: 0;
 
+
 }
 
-nav li {
+footer li {
     list-style-type: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-right: 20px;
+    width: 100%;
 }
 
-nav a {
+footer a {
     text-decoration: none;
     padding: 5px;
     text-transform: uppercase;
+    text-shadow: 2px 2px 2px hsl(330, 88%, 60%);
+    font-weight: 700;
+    color:white;
 }
 
-/* keep a black color on clicked navlink */
-nav a:visited {
-    color: black;
+/* keep a black color on clicked footerlink */
+footer a:visited {
+    color: white;
 }
 
-nav li:hover {
+footer li:hover {
     background: white;
     letter-spacing: 1px;
 }
@@ -103,11 +107,14 @@ nav li:hover {
 }
 
 /* the question bar below the answer buttons */
-#question {
+.question {
     margin: 20px 0px 20px;
     font-size: 2rem;
     background: hsl(39, 77%, 83%);
     padding: 10px;
+}
+.smallscreen {
+    display: none;
 }
 
 #rightAnswers,
@@ -170,25 +177,8 @@ ol>li::marker {
     font-weight: 700;
 }
 
-.formtitle {
-    font-size: 2rem;
-    display: block;
-    margin-top: 50px;
-}
-
-#submitNewQuestion {
-    padding: 5px;
-    font-size: 1.5rem;
-    background: hsl(330, 88%, 60%);
-}
-
-#submitNewQuestion:hover {
-    background: hsl(120, 88%, 60%);
-
-}
-
 #restart:hover {
-    border: 4px inset hsl(330, 79%, 15%);
+    border: 4px inset hsl(357, 100%, 50%);
 }
 
 /* __________ contact.html ___________ */
@@ -218,7 +208,7 @@ ol>li::marker {
     }
 
     #container {
-        padding: 10px 0px 40px;
+        padding: 0px 0px 40px;
     }
 }
 
@@ -229,16 +219,20 @@ ol>li::marker {
         padding: 5px;
     }
 
-    h3 {
+    h2 {
         font-size: 1.5rem;
     }
+.smallscreen {
+    display: block;
+    margin:0;
+}
+.bigscreen {
+    display:none
+}
+#answerContainer {
+    margin-top: 0;
+}
 
-
-    .questionImages {
-        width: 150px;
-        height: 150px;
-        margin: 5px;
-    }
 
     #keepScore {
         padding: 5px 5px 60px;
@@ -250,12 +244,4 @@ ol>li::marker {
         transform: none;
     }
 
-}
-
-@media screen and (max-width: 400px) {
-    .questionImages {
-        width: 130px;
-        height: 150px;
-        margin: 5px;
-    }
 }
