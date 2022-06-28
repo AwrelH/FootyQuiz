@@ -1,29 +1,63 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 document.addEventListener("DOMContentLoaded", function () {
-  let playerName = window.prompt("Type your player name", "Player");
-  if (playerName === null) {
-    playerName = "Player";
-  }
-  document.getElementById("playerName").innerHTML = playerName;
+  
 
-  startGame(questions[i]);
+  
 });
+//APPEND div, h1, p of the start page when entering page
+let myIntroDiv = document.createElement("div");
+myIntroDiv.id = "intro";
+let myHeading = document.createElement("h1");
+myHeadingText = document.createTextNode("Welcome to Footy Quiz!");
+myHeading.append(myHeadingText);
 
-  var i = 0;
-  var right = 0;
-  var wrong = 0;
+let myParagraph = document.createElement("p");
+myParagraphText =
+  document.createTextNode(`You will get (ten)10 questions and on each question you will have four(4)
+ options/buttons that represent answers, one is correct and the rest are not.
+The green and pinkred counter will keep you informed on how well you
+are doing. If you want to play again, just press the 'Restart'-button.
+Good Luck. When ever you are ready,`);
+myParagraph.id = "intro";
+
+let myIntroButton = document.createElement("button");
+myButtonText = document.createTextNode("click to play!");
+myIntroButton.append(myButtonText);
+myIntroButton.id = "introButton";
+
+myParagraph.append(myParagraphText, myIntroButton);
+
+//APPEND to the empty div
+let myDiv = document.getElementById("myDiv");
+myDiv.append(myHeading, myParagraph);
+
+//
+let introButton = document.getElementById("introButton");
+introButton.addEventListener("click", welcome);
+
+
+
+
+
+
+
+
+
+  let i = 0;
+  let right = 0;
+  let wrong = 0;
   function startGame(question) {
     let option1 = question.answers.a;
     let option2 = question.answers.b;
     let option3 = question.answers.c;
     let option4 = question.answers.d;
     let quest = question.question;
-    document.getElementById("question").innerHTML = quest;
-    document.getElementById("optionA").innerHTML = option1;
-    document.getElementById("optionB").innerHTML = option2;
-    document.getElementById("optionC").innerHTML = option3;
-    document.getElementById("optionD").innerHTML = option4;
+    document.getElementById("question").innerText = quest;
+    document.getElementById("optionA").innerText = option1;
+    document.getElementById("optionB").innerText = option2;
+    document.getElementById("optionC").innerText = option3;
+    document.getElementById("optionD").innerText = option4;
    
   }
   function answered(option) {
@@ -31,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (correct === option) {
       console.log("thats right");
       right++;
-      document.getElementById("rightAnswers").innerHTML = right.toString();
+      document.getElementById("rightAnswers").innerText = right.toString();
     } else {
       wrong++;
-      document.getElementById("wrongAnswers").innerHTML = wrong.toString();
+      document.getElementById("wrongAnswers").innerText = wrong.toString();
     }
     i++;
     // if not the end of the game onto the next question
@@ -48,9 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function endGame() {
     document.getElementById("answerContainer").style.display = "none";
+    //removes the absolute position from the h2 element and keeps score boxes below and not under it
+    //when removing display 
+    document.getElementById('question').style.position = "initial";
     document.getElementById(
       "question"
     ).innerHTML = `You have reached the end of the game and you got ${right} correct answer(s)`;
+
   }
   
   /**
@@ -59,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
    */
   const questions = [
     {
-      question: "Who is the world champion of WC 2018?",
+      question: "Who are the world champion of WC 2018?",
       answers: {
         a: "Croatia <img alt='flag of croatia' src='assets/images/q-images/croatia.png'>",
       b: "Spain <img alt='flag of spain' src='assets/images/q-images/spain.png'>",
@@ -69,11 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
       correctAnswer: "d",
     },
     {
-      question: "Which world cups did zlatan play?",
+      question: "Which world cups did Zlatan Ibrahimovic play?",
       answers: {
         a: "1998 and 2002",
         b: "2002 and 2006",
-        c: "none",
+        c: "He didn't",
         d: " 2006 and 2010",
       },
       correctAnswer: "b",
@@ -100,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       question:
-        "What is the  name of the instrument that was popular in the world cup 2008?",
+        "The name of the instrument that was popular in the WC 2008?",
       answers: {
         a: "Saxophone",
       b: "Vuvuzela",
@@ -140,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
       correctAnswer: "c",
     },
     {
-      question: "What is the name of Maradonas famous goal against",
+      question: "What is the name of Maradonas famous goal against England?",
       answers: {
         a: "Foot of God <img alt='a foot' src='assets/images/q-images/foot.png'>",
       b: "Chest of God <img alt='a hairy chest' src='assets/images/q-images/chest.png'>",
@@ -161,3 +199,14 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
 
+  function welcome() {
+    document.getElementById("myDiv").style.display = "none";
+    startGame(questions[i]);
+    let playerName = window.prompt("Type your player name", "Player");
+  if (playerName === null) {
+    playerName = "Player";
+  }
+  document.getElementById("playerName").innerText = playerName;
+    
+  }
+  
