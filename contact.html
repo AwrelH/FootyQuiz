@@ -18,14 +18,18 @@
         })();
     </script>
     <script type="text/javascript">
+      
         window.onload = function () {
             document.getElementById('form').addEventListener('submit', function (event) {
                 event.preventDefault();
-
+                button.value = 'Sending...';
                 emailjs.sendForm('service_pxelf4c', 'template_sc17bld', this)
                     .then(function () {
                         console.log('SUCCESS!');
                         alert('Your message have been sent!');
+                        document.getElementById("form").reset();
+                        button.value = 'Send message';
+
                     }, function (error) {
                         console.log('FAILED...', error);
                     });
@@ -33,14 +37,11 @@
         }
     </script>
     <title>Footy Quiz - who scored the hand of God goal? </title>
-
 </head>
-
 <body>
 
     <!-- Welcome title for the page -->
     <h1>Footy Quiz!</h1>
-   
     <header>
         <nav>
             <ul>
@@ -53,22 +54,17 @@
  <p>How was your game experience? Let us know!</p>
 
         <form id="form">
-
             <div class="field">
                 <label for="from_name">name</label>
                 <input type="text" name="from_name" id="from_name" required>
             </div>
-
             <div class="field">
                 <label for="message">message</label>
                 <textarea id="message" cols="30" rows="10" required></textarea>
             </div>
-
             <input type="submit" id="button" value="Send Message">
         </form>
 
     </div>
-
 </body>
-
 </html>
