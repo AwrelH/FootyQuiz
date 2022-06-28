@@ -108,6 +108,7 @@ input[type="submit"]:hover {
   background: hsl(120, 56%, 48%);
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 600px) {
 
   h1 {

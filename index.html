@@ -14,18 +14,19 @@
 
 <body>
     <!-- Welcome title for the page -->
-    
+    <div id="myDiv"></div>
     <header>
        <h1>Welcome To Footy Quiz, <span id="playerName">Player</span>!</h1> 
        
     </header>
+<!-- Layer welcome page with instructions -->
 
     <!-- Container for the main content  -->
     <div id="container">
         <!-- Game zone where the content of the questions will be -->
         <div class="gameZone">
-            
-            <h2 class="question smallscreen">Are you ready for a World Cup quiz?</h2>
+
+            <!-- <h2 id="question">Are you ready for a World Cup quiz?</h2> -->
             <div id="answerContainer">
                 <button id="optionA" class="answer" onclick="answered('a')">
                     Answer 1
@@ -41,7 +42,7 @@
                 </button>
             </div>
             <!-- The question row that needs to be answered -->
-            <h2 class="question bigscreen">Are you ready for a World Cup quiz?</h2>
+            <h2 id="question">Are you ready for a World Cup quiz?</h2>
 
             <!-- Where the score is kept and registered -->
             <div id="keepScore">
