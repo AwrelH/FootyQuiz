@@ -18,15 +18,20 @@ myParagraphText =
  options/buttons that represent answers, one is correct and the rest are not.
 The green and pinkred counter will keep you informed on how well you
 are doing. If you want to play again, just press the 'Restart'-button.
-Good Luck. When ever you are ready,`);
+Good Luck. When ever you are ready type your name and click on the button.`);
 myParagraph.id = "intro";
 
 let myIntroButton = document.createElement("button");
 myButtonText = document.createTextNode("click to play!");
 myIntroButton.append(myButtonText);
 myIntroButton.id = "introButton";
+addInput = document.createElement('input');
+addInput.setAttribute('placeholder', 'Type your player name');
+addInput.id = 'addName';
 
-myParagraph.append(myParagraphText, myIntroButton);
+
+
+myParagraph.append(myParagraphText, addInput,myIntroButton );
 
 //APPEND to the empty div
 let myDiv = document.getElementById("myDiv");
@@ -195,9 +200,10 @@ const questions = [{
 function welcome() {
   document.getElementById("myDiv").style.display = "none";
   startGame(questions[i]);
-  let playerName = window.prompt("Type your player name", "Player");
-  if (playerName === null) {
-    playerName = "Player";
-  }
-  document.getElementById("playerName").innerText = playerName;
+  let typedName = document.getElementById('addName');
+    document.getElementById("playerName").innerText = typedName.value; 
+  if (typedName.value === "" ) {
+   typedName = "Player";
+    document.getElementById("playerName").innerText = typedName; }
+ 
 }
