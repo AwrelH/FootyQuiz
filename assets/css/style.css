@@ -184,6 +184,9 @@ footer li:hover {
     align-items: center;
     font-size: 3rem;
 }
+#theAnswers {
+    font-size: 1.2rem;
+}
 
 img {
     max-width: 77px;
@@ -241,9 +244,17 @@ ol>li::marker {
 summary {
     display: none;
     border: 4px inset black;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding:10px;
     height:2rem;
+    background-color: hsl(240, 8%, 83%);
+}
+summary:hover {
+    border-color: hsl(120, 100%, 40%);
+}
+li {
+    margin-left:10px;
+    list-style-type: none;
 }
 
 /* __________ Media queries __________ */
