@@ -1,10 +1,3 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
-document.addEventListener("DOMContentLoaded", function () {
-
-
-
-});
 //APPEND div, h1, p of the start page when entering page
 let myIntroDiv = document.createElement("div");
 myIntroDiv.id = "intro";
@@ -36,8 +29,6 @@ addInput.onkeydown = function (e) {
     welcome();
   }
 }
-
-
 
 myParagraph.append(myParagraphText, addInput,myIntroButton );
 
@@ -99,11 +90,9 @@ function endGame() {
   document.getElementById("question").innerText =
     `You have reached the end of the game and you got ${right} correct answer(s)`;
     revealAnswers();
-   
 }
 
 /**
- *
  * All the questions and answers within an array, seperated within objects
  */
 const questions = [{
@@ -216,12 +205,10 @@ function welcome() {
   if (typedName.value === "" ) {
    typedName = "Player";
     document.getElementById("playerName").innerText = typedName; }
+
  //pushes answers to array and with toString the array will be printed in p element
 }let collectAnswers = [ ];
 collectAnswers.join(' ');
-
-
-
 
 //will reveal the answers when the all questions are answered 
 function revealAnswers() {

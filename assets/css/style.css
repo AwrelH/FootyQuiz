@@ -186,6 +186,7 @@ footer li:hover {
 }
 #theAnswers {
     font-size: 1.2rem;
+    list-style-type: none;
 }
 
 img {
@@ -252,7 +253,7 @@ summary {
 summary:hover {
     border-color: hsl(120, 100%, 40%);
 }
-li {
+summary li {
     margin-left:10px;
     list-style-type: none;
 }
