@@ -18,7 +18,7 @@ myParagraphText =
  options/buttons that represent answers, one is correct and the rest are not.
 The green and pinkred counter will keep you informed on how well you
 are doing. If you want to play again, just press the 'Restart'-button.
-Good Luck. When ever you are ready type your name and click on the button.`);
+Good Luck. When ever you are ready, type your name and click on the button.`);
 myParagraph.id = "intro";
 
 let myIntroButton = document.createElement("button");
@@ -28,6 +28,14 @@ myIntroButton.id = "introButton";
 addInput = document.createElement('input');
 addInput.setAttribute('placeholder', 'Type your player name');
 addInput.id = 'addName';
+// instructions and code from below to assign enter-button
+//https://tutorial.eyehunts.com/js/how-to-press-enter-key-programmatically-in-javascript-example-code/
+//
+addInput.onkeydown = function (e) {
+  if (e.key === 'Enter') {
+    welcome();
+  }
+}
 
 
 
@@ -65,10 +73,12 @@ function answered(option) {
   if (correct === option) {
     console.log("thats right");
     right++;
-    document.getElementById("rightAnswers").innerText = right.toString();
+    document.getElementById("rightAnswers").innerText = right;
+    collectAnswers.push(`<li><b>question:${[i+1]}</b> You answered correct  ${correct} </li>`);
   } else {
     wrong++;
-    document.getElementById("wrongAnswers").innerText = wrong.toString();
+    document.getElementById("wrongAnswers").innerText = wrong;
+    collectAnswers.push(`<li><b>question:${[i+1]}</b> The correct answer is  ${correct} </li>`);
   }
   i++;
   // if not the end of the game onto the next question
@@ -88,7 +98,8 @@ function endGame() {
   document.getElementById('question').style.position = "initial";
   document.getElementById("question").innerText =
     `You have reached the end of the game and you got ${right} correct answer(s)`;
-
+    revealAnswers();
+   
 }
 
 /**
@@ -205,5 +216,16 @@ function welcome() {
   if (typedName.value === "" ) {
    typedName = "Player";
     document.getElementById("playerName").innerText = typedName; }
- 
+ //pushes answers to array and with toString the array will be printed in p element
+}let collectAnswers = [ ];
+collectAnswers.join(' ');
+
+
+
+
+//will reveal the answers when the all questions are answered 
+function revealAnswers() {
+//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_tostring_array toString();
+document.getElementById('theAnswers').innerHTML =  collectAnswers.join(' ');
+document.querySelector('summary').style.display = 'block';
 }
