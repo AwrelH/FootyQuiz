@@ -2,7 +2,7 @@
 
 [View the live project here.](https://awrelh.github.io/FootyQuiz/)
 
-This is a football quiz for the fans of the biggest sport in the world.
+This is the smallest football quiz for the fans of the biggest sport in the world.
 
 <h2 align="center"><img src="assets/images/forREADME/mockup.png"></h2>
 
@@ -51,11 +51,11 @@ This is a football quiz for the fans of the biggest sport in the world.
 
 -   About the questionbar, it will move up underneath the welcome title if screen is smaller than 600px. ![Questionbar](assets/images/forREADME/questionbar.PNG)
 
--   When completed the 10 questions you will have get an message about that. ![Endgame](assets/images/forREADME/endgameScreen.PNG)
+-   When completed the 10 questions you will have get an message about that. Also another box will appear displaying all the correct answers to user in a details-element. In same style as the other boxes ![Endgame](assets/images/forREADME/endgameScreen.PNG)
 
-- also it's possible for user to contact creator via link that is in the footer. 
+- It's also possible for user to contact creator via link that is in the footer. 
 
--   The contact page is very straight forward, a form with name and textarea and a submit-button. And the possibility to return to quiz-page when clicking on the link in the banner.   
+-   The contact page is very straight forward, a form with name and textarea and a submit-button. And you are able to return to quiz-page when clicking on the link in the banner. The submit button changes value when pushed to 'sending...' and an alert message appears when message has been sent. When clicking it you will have an empty form.
 ![Contactpage](assets/images/forREADME/contactpage.PNG)
 
 
@@ -71,12 +71,10 @@ This is a football quiz for the fans of the biggest sport in the world.
 
 1. [Google Fonts:](https://fonts.google.com/)
     - Google fonts were used top import fonts into the style.css file which is used on both pages.
-1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on to retrieve one icon of football. 
 1. [Git](https://git-scm.com/)
     - Git was used for version control, use of commands as git add, git commit, git push. 
 1. [GitHub:](https://github.com/)
-    - GitHub is used to start the project via codeInstute template, and is coded via gitpod. 
+    - GitHub is used to start the project via code Institute template, and was coded on gitpod.io. 
 
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the start of project.
@@ -91,14 +89,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 - [JSHint code quality tool](https://jigsaw.w3.org/css-validator/#validate_by_input) - COMMENT.
 
-- Lighthouse
+- [Lighthouse via pagespeed ](https://pagespeed.web.dev/) - tested my project through Lighthouse with good results. Only real question marks were the banner-image that was too big and creates an excessive load time, will have to do something about it and contrast between the 'contact'-link and the background, when the page loads with the overlay transparency. ![](assets/images/forREADME/lighthouseReport.PNG)
 
 ### Debugging
     A bug that appeared that I discoved was when changing all the innerHTML to innerText. This made my buttons not display images and it took a little time but after a while I got it and changed it back. Why I changed it in the first case is because I heard/read something about XSS attacks. Most changes could stay but on the buttons had to go. 
 
-### Known Bugs
--   The Website was tested on Mozilla Firefox, Google Chrome, and Microsoft Edge.
--   The website was viewed on a variety of devices from Desktop, Laptop, and phone and pad from the set-up that is available on the developer tools in these browsers. 
+### Tests
+-   The Website was tested on Mozilla Firefox, Google Chrome, and Microsoft Edge. Also on Samsung s10e and Huawei MediaPad T5.
+-   The website was also viewed on a variety of devices from Desktop, Laptop, and phone and pad from the set-up that is available on the developer tools in these browsers. 
 
 ## Deployment
 ### GitHub Pages
@@ -117,13 +115,20 @@ w3school - https://www.w3schools.com/jsref/met_form_reset.asp
 
 ### Code
 - Code regarding the form on contact.html is taken from [emailJS](https://www.emailjs.com/docs/tutorial/creating-contact-form/). 
+- Instructions from (https://tutorial.eyehunts.com/js/how-to-press-enter-key-programmatically-in-javascript-example-code/) how to apply keypress. 
+
 
 ### Media
 
 -   All Images were sourced from.
     https://iconarchive.com/ for most the flags
-    https://coolors.co/ were used to make a palette for my readme.
-    google image searches
+-   https://coolors.co/ were used to make a palette for my readme.
+-   google image searches
+
+# Future features
+- add more themes, for example, league questions, footballer questions, weird football facts and so on.
+- Give the page animations.
+- High score possibilities.
 
 
 ### Acknowledgements
