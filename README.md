@@ -8,7 +8,7 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
 
 ## User Experience (UX)
 
--   ### User stories
+-   ### User story
 
     As a user I want to play a quiz that is straight forward. 
     This is the question and those are the alternatives. I want to see how I progress while playing and at some point the game will let me know that the game if finished. I want to be challenged with questions that regards football and hopefully learn something. 
@@ -26,17 +26,19 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
         -   The font family I've used is Kanita, PT Sans Narrow, Sansita, sans-serif.
     -   #### Imagery
         -   I've used a banner image of a stadium and a ball on top, behind the welcome-text. And the additional imagery is only complementing some questions where I found it adding value to the questions, flags for countries for example. 
-
+    -   #### Two CSS-files
+        -   I created two different CSS files to separate them because some of it was a not needed in contact.html and gave a better workflow. 
 *   ### Wireframes
 
     -   Home Page Wireframe - [View](assets/images/forREADME/footyQuizDesktop.png), clearly some changes that came along the project, removing of the highscore and suggestion textarea. Suggestion is added in seperate page.
 
     -   Mobile Wireframe - [View](assets/images/forREADME/footyQuizMobile.png)
 
-   
+## The questions
+    The questions are just a creation of imagination with a little bit of googling facts. Some are regarding dates, teams and players. Also there's one random question about an instrument had a big inpact on the stadium environment. 
 
 ## Features
-
+ 
 -   Responsive on all device sizes
 
 -   Interactive game for everyone, but especially football lovers
