@@ -8,29 +8,30 @@ myHeading.append(myHeadingText);
 let myParagraph = document.createElement("p");
 myParagraphText =
   document.createTextNode(`You will get (ten)10 questions and on each question you will have four(4)
- options/buttons that represent answers, one is correct and the rest are not.
+ options/buttons that represent answers, one is correct and the rest are not. \n
 The green and pinkred counter will keep you informed on how well you
-are doing. If you want to play again, just press the 'Restart'-button.
-Good Luck. When ever you are ready, type your name and click on the button.`);
+are doing. If you want to play again, just press the 'Restart'-button. \n
+Good Luck.When ever you are ready, type your name and click on the button. \n`);
 myParagraph.id = "intro";
 
 let myIntroButton = document.createElement("button");
 myButtonText = document.createTextNode("click to play!");
 myIntroButton.append(myButtonText);
 myIntroButton.id = "introButton";
-addInput = document.createElement('input');
-addInput.setAttribute('placeholder', 'Type your player name');
-addInput.id = 'addName';
+addInput = document.createElement("input");
+addInput.setAttribute("placeholder", "Type your player name");
+addInput.setAttribute('required', '');
+addInput.id = "addName";
 // instructions and code from below to assign enter-button
 //https://tutorial.eyehunts.com/js/how-to-press-enter-key-programmatically-in-javascript-example-code/
 //
 addInput.onkeydown = function (e) {
-  if (e.key === 'Enter') {
+  if (e.key === "Enter") {
     welcome();
   }
-}
+};
 
-myParagraph.append(myParagraphText, addInput,myIntroButton );
+myParagraph.append(myParagraphText, addInput, myIntroButton);
 
 //APPEND to the empty div
 let myDiv = document.getElementById("myDiv");
@@ -39,7 +40,6 @@ myDiv.append(myHeading, myParagraph);
 //Adding eventlistener to introbutton
 let introButton = document.getElementById("introButton");
 introButton.addEventListener("click", welcome);
-
 
 let i = 0;
 let right = 0;
@@ -56,7 +56,6 @@ function startGame(question) {
   document.getElementById("optionB").innerHTML = option2;
   document.getElementById("optionC").innerHTML = option3;
   document.getElementById("optionD").innerHTML = option4;
-
 }
 
 function answered(option) {
@@ -65,11 +64,15 @@ function answered(option) {
     console.log("thats right");
     right++;
     document.getElementById("rightAnswers").innerText = right;
-    collectAnswers.push(`<li><b>question:${[i+1]}</b> You answered correct  ${correct} </li>`);
+    collectAnswers.push(
+      `<li><b>question:${[i + 1]}</b> You answered correct  ${correct} </li>`
+    );
   } else {
     wrong++;
     document.getElementById("wrongAnswers").innerText = wrong;
-    collectAnswers.push(`<li><b>question:${[i+1]}</b> The correct answer is  ${correct} </li>`);
+    collectAnswers.push(
+      `<li><b>question:${[i + 1]}</b> The correct answer is  ${correct} </li>`
+    );
   }
   i++;
   // if not the end of the game onto the next question
@@ -85,17 +88,19 @@ function answered(option) {
 function endGame() {
   document.getElementById("answerContainer").style.display = "none";
   //removes the absolute position from the h2 element and keeps score boxes below and not under it
-  //when removing display 
-  document.getElementById('question').style.position = "initial";
-  document.getElementById("question").innerText =
-    `You have reached the end of the game and you got ${right} correct answer(s)`;
-    revealAnswers();
+  //when removing display
+  document.getElementById("question").style.position = "initial";
+  document.getElementById(
+    "question"
+  ).innerText = `You have reached the end of the game and you got ${right} correct answer(s)`;
+  revealAnswers();
 }
 
 /**
  * All the questions and answers within an array, seperated within objects
  */
-const questions = [{
+const questions = [
+  {
     question: "Who are the world champion of WC 2018?",
     answers: {
       a: "Croatia <img alt='flag of croatia' src='assets/images/q-images/croatia.png'>",
@@ -200,19 +205,21 @@ const questions = [{
 function welcome() {
   document.getElementById("myDiv").style.display = "none";
   startGame(questions[i]);
-  let typedName = document.getElementById('addName');
-    document.getElementById("playerName").innerText = typedName.value; 
-  if (typedName.value === "" ) {
-   typedName = "Player";
-    document.getElementById("playerName").innerText = typedName; }
+  let typedName = document.getElementById("addName");
+  document.getElementById("playerName").innerText = typedName.value;
+  if (typedName.value === "") {
+    typedName = "Player";
+    document.getElementById("playerName").innerText = typedName;
+  }
 
- //pushes answers to array and with toString the array will be printed in p element
-}let collectAnswers = [ ];
-collectAnswers.join(' ');
+  //pushes answers to array and with toString the array will be printed in p element
+}
+let collectAnswers = [];
+collectAnswers.join(" ");
 
-//will reveal the answers when the all questions are answered 
+//will reveal the answers when the all questions are answered
 function revealAnswers() {
-//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_tostring_array toString();
-document.getElementById('theAnswers').innerHTML =  collectAnswers.join(' ');
-document.querySelector('summary').style.display = 'block';
+  //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_tostring_array toString();
+  document.getElementById("theAnswers").innerHTML = collectAnswers.join(" ");
+  document.querySelector("summary").style.display = "block";
 }

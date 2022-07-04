@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/contact.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
 
     <!-- emailjs input -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-        let btn = document.getElementById('button');
-    </script>
-    <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('FhOOQCjv2MlhNPMeg');
-        })();
-    </script>
-    <script type="text/javascript">
-      
-        window.onload = function () {
-            document.getElementById('form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                button.value = 'Sending...';
-                emailjs.sendForm('service_pxelf4c', 'template_sc17bld', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-                        alert('Your message have been sent!');
-                        document.getElementById("form").reset();
-                        button.value = 'Send message';
+      let btn = document.getElementById('button');
+  </script>
+  <script type="text/javascript">
+      (function () {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('FhOOQCjv2MlhNPMeg');
+      })();
+  </script>
+  <script type="text/javascript">
+    
+      window.onload = function () {
+          document.getElementById('form').addEventListener('submit', function (event) {
+              event.preventDefault();
+              button.value = 'Sending...';
+              emailjs.sendForm('service_pxelf4c', 'template_sc17bld', this)
+                  .then(function () {
+                      console.log('SUCCESS!');
+                      alert('Your message have been sent!');
+                      document.getElementById("form").reset();
+                      button.value = 'Send message';
 
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-    <title>Footy Quiz - who scored the hand of God goal? </title>
-</head>
-<body>
-
+                  }, function (error) {
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+    <title>Footy Quiz - who scored the hand of God goal?</title>
+  </head>
+  <body>
     <!-- Welcome title for the page -->
     <h1>Footy Quiz!</h1>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Go back to the quiz</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Go back to the quiz</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- Possibility for players to share feedback and/or suggest additional questions -->
     <div id="container">
- <p>How was your game experience? Let us know!</p>
+      <p>How was your game experience? Let us know!</p>
 
-        <form id="form">
-            <div class="field">
-                <label for="from_name">name</label>
-                <input type="text" name="from_name" id="from_name" required>
-            </div>
-            <div class="field">
-                <label for="message">message</label>
-                <textarea id="message" cols="30" rows="10" required></textarea>
-            </div>
-            <input type="submit" id="button" value="Send Message">
-        </form>
-
+      <form id="form">
+        <div class="field">
+          <label for="from_name">name</label>
+          <input type="text" name="from_name" id="from_name" required />
+        </div>
+        <div class="field">
+          <label for="message">message</label>
+          <textarea id="message" cols="30" rows="10" required></textarea>
+        </div>
+        <input type="submit" id="button" value="Send Message" />
+      </form>
     </div>
-</body>
+  </body>
 </html>
