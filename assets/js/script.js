@@ -20,7 +20,7 @@ myIntroButton.append(myButtonText);
 myIntroButton.id = "introButton";
 addInput = document.createElement("input");
 addInput.setAttribute("placeholder", "Type your player name");
-addInput.setAttribute('required', '');
+addInput.setAttribute("required", "");
 addInput.id = "addName";
 // instructions and code from below to assign enter-button
 //https://tutorial.eyehunts.com/js/how-to-press-enter-key-programmatically-in-javascript-example-code/

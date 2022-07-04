@@ -7,34 +7,39 @@
     <link rel="stylesheet" href="assets/css/contact.css" />
 
     <!-- emailjs input -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    >
       let btn = document.getElementById('button');
-  </script>
-  <script type="text/javascript">
+    </script>
+    <script type="text/javascript">
       (function () {
-          // https://dashboard.emailjs.com/admin/account
-          emailjs.init('FhOOQCjv2MlhNPMeg');
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("FhOOQCjv2MlhNPMeg");
       })();
-  </script>
-  <script type="text/javascript">
-    
+    </script>
+    <script type="text/javascript">
       window.onload = function () {
-          document.getElementById('form').addEventListener('submit', function (event) {
-              event.preventDefault();
-              button.value = 'Sending...';
-              emailjs.sendForm('service_pxelf4c', 'template_sc17bld', this)
-                  .then(function () {
-                      console.log('SUCCESS!');
-                      alert('Your message have been sent!');
-                      document.getElementById("form").reset();
-                      button.value = 'Send message';
-
-                  }, function (error) {
-                      console.log('FAILED...', error);
-                  });
+        document
+          .getElementById("form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            button.value = "Sending...";
+            emailjs.sendForm("service_pxelf4c", "template_sc17bld", this).then(
+              function () {
+                console.log("SUCCESS!");
+                alert("Your message have been sent!");
+                document.getElementById("form").reset();
+                button.value = "Send message";
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
           });
-      }
-  </script>
+      };
+    </script>
     <title>Footy Quiz - who scored the hand of God goal?</title>
   </head>
   <body>

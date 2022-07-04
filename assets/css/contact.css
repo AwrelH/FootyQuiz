@@ -1,5 +1,5 @@
 /* GoogleFonts */
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=PT+Sans+Narrow&family=Sansita&family=Short+Stack&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=PT+Sans+Narrow&family=Sansita&family=Short+Stack&display=swap");
 
 /* General styling */
 *,
@@ -114,16 +114,13 @@ input[type="submit"]:hover {
 #error404 {
   font-size: 2rem;
   text-align: center;
-  text-shadow: 2px 0px 0  hsl(0, 0%, 100%);
+  text-shadow: 2px 0px 0 hsl(0, 0%, 100%);
   font-weight: 900;
 }
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 600px) {
-
   h1 {
     font-size: 2rem;
-    
   }
-
 }

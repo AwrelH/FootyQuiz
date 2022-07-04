@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <meta name="description" content="a javascript quiz game about football and the world cup of football, 
-        ten questions that will test your knowledge about the topic">
+    <meta
+      name="description"
+      content="a javascript quiz game about football and the world cup of football, 
+        ten questions that will test your knowledge about the topic"
+    />
 
     <title>Footy Quiz - who scored the hand of God goal?</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Welcome title for the page -->
     <div id="myDiv"></div>
     <header>
-        <h1>Welcome To Footy Quiz, <span id="playerName">Player</span>!</h1>
-
+      <h1>Welcome To Footy Quiz, <span id="playerName">Player</span>!</h1>
     </header>
     <!-- Layer welcome page with instructions -->
 
     <!-- Container for the main content  -->
     <div id="container">
-        <!-- Game zone where the content of the questions will be -->
-        <div class="gameZone">
-
-            <!-- <h2 id="question">Are you ready for a World Cup quiz?</h2> -->
-            <div id="answerContainer">
-                <button id="optionA" class="answer" onclick="answered('a')">
-                    Answer A
-                </button>
-                <button id="optionB" class="answer" onclick="answered('b')">
-                    Answer B
-                </button>
-                <button id="optionC" class="answer" onclick="answered('c')">
-                    Answer C
-                </button>
-                <button id="optionD" class="answer" onclick="answered('d')">
-                    Answer D
-                </button>
-            </div>
-            <!-- The question row that needs to be answered -->
-            <h2 id="question">Are you ready for a World Cup quiz?</h2>
-
-            <!-- Where the score is kept and registered -->
-            <div id="keepScore">
-                <span id="rightAnswers">0</span>
-                <span id="wrongAnswers">0</span>
-
-                <button type="reset" id="restart" onclick="location.reload();">Restart</button>
-                <details>
-                    <summary>Answers</summary>
-                    <p id="theAnswers"></p>
-                </details>
-            </div>
+      <!-- Game zone where the content of the questions will be -->
+      <div class="gameZone">
+        <!-- <h2 id="question">Are you ready for a World Cup quiz?</h2> -->
+        <div id="answerContainer">
+          <button id="optionA" class="answer" onclick="answered('a')">
+            Answer A
+          </button>
+          <button id="optionB" class="answer" onclick="answered('b')">
+            Answer B
+          </button>
+          <button id="optionC" class="answer" onclick="answered('c')">
+            Answer C
+          </button>
+          <button id="optionD" class="answer" onclick="answered('d')">
+            Answer D
+          </button>
         </div>
+        <!-- The question row that needs to be answered -->
+        <h2 id="question">Are you ready for a World Cup quiz?</h2>
 
+        <!-- Where the score is kept and registered -->
+        <div id="keepScore">
+          <span id="rightAnswers">0</span>
+          <span id="wrongAnswers">0</span>
 
+          <button type="reset" id="restart" onclick="location.reload();">
+            Restart
+          </button>
+          <details>
+            <summary>Answers</summary>
+            <p id="theAnswers"></p>
+          </details>
+        </div>
+      </div>
     </div>
 
     <script src="assets/js/script.js"></script>
     <footer>
-        <ul>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </footer>
-</body>
-
+  </body>
 </html>
