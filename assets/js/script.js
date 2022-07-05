@@ -2,11 +2,11 @@
 let myIntroDiv = document.createElement("div");
 myIntroDiv.id = "intro";
 let myHeading = document.createElement("h1");
-myHeadingText = document.createTextNode("Welcome to Footy Quiz!");
+let myHeadingText = document.createTextNode("Welcome to Footy Quiz!");
 myHeading.append(myHeadingText);
 
 let myParagraph = document.createElement("p");
-myParagraphText =
+let myParagraphText =
   document.createTextNode(`You will get (ten)10 questions and on each question you will have four(4)
  options/buttons that represent answers, one is correct and the rest are not. \n
 The green and pinkred counter will keep you informed on how well you
@@ -15,10 +15,10 @@ Good Luck.When ever you are ready, type your name and click on the button. \n`);
 myParagraph.id = "intro";
 
 let myIntroButton = document.createElement("button");
-myButtonText = document.createTextNode("click to play!");
+let myButtonText = document.createTextNode("click to play!");
 myIntroButton.append(myButtonText);
 myIntroButton.id = "introButton";
-addInput = document.createElement("input");
+let addInput = document.createElement("input");
 addInput.setAttribute("placeholder", "Type your player name");
 addInput.setAttribute("required", "");
 addInput.id = "addName";
@@ -59,7 +59,7 @@ function startGame(question) {
 }
 
 function answered(option) {
-  correct = questions[i].correctAnswer;
+  let correct = questions[i].correctAnswer;
   if (correct === option) {
     console.log("thats right");
     right++;
@@ -125,7 +125,7 @@ const questions = [
     answers: {
       a: "Romario <img alt='romario' src='assets/images/q-images/romario.png'>",
       b: "Costacurta <img src='assets/images/q-images/costacurta.png'>",
-      c: "Robert Baggio <img src='assets/images/q-images/baggio.png'>",
+      c: "Roberto Baggio <img src='assets/images/q-images/baggio.png'>",
       d: "Ravanelli <img src='assets/images/q-images/ravanelli.png'>",
     },
     correctAnswer: "c",
@@ -212,14 +212,14 @@ function welcome() {
     document.getElementById("playerName").innerText = typedName;
   }
 
-  //pushes answers to array and with toString the array will be printed in p element
+  //pushes answers to array and with join() the array will be printed in p element
 }
 let collectAnswers = [];
 collectAnswers.join(" ");
 
 //will reveal the answers when the all questions are answered
 function revealAnswers() {
-  //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_tostring_array toString();
+  //https://www.w3schools.com/jsref/jsref_join.asp
   document.getElementById("theAnswers").innerHTML = collectAnswers.join(" ");
   document.querySelector("summary").style.display = "block";
 }
