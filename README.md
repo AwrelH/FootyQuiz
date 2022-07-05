@@ -16,7 +16,7 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
 
 
 -   ### Design
-    -   #### Colour Scheme
+    -   #### Color Scheme
         -  the color scheme I have used.
         
         ![](assets/images/forREADME/colors.png)
@@ -30,7 +30,7 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
         -   I created two different CSS files to separate them because some of it was a not needed in contact.html and gave a better workflow. 
 *   ### Wireframes
 
-    -   Home Page Wireframe - [View](assets/images/forREADME/footyQuizDesktop.png), clearly some changes that came along the project, removing of the highscore and suggestion textarea. Suggestion is added in seperate page.
+    -   Home Page Wireframe - [View](assets/images/forREADME/footyQuizDesktop.png), clearly some changes that came along the project, removing of the highscore and suggestion textarea. Suggestion is added in separate page.
 
     -   Mobile Wireframe - [View](assets/images/forREADME/footyQuizMobile.png)
 
@@ -83,15 +83,27 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate the pages of the project and make sure code is correct. Also JSHint was used to validate the JavaScript. And Chrome Lighthouse was used aswell.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate the pages of the project and make sure code is correct. Also JSHint was used to validate the JavaScript. And Chrome Lighthouse devtool was used as well.
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - no errors were found doing test.
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - one error were found regarding background-position that was applied twice within one selector. 
 
-- [JSHint code quality tool](https://jigsaw.w3.org/css-validator/#validate_by_input) - COMMENT.
+- [JSHint code quality tool](https://jshint.com/) - No warnings were hinted. Some metrics that was returned:
 
-- [Lighthouse via pagespeed ](https://pagespeed.web.dev/) - tested my project through Lighthouse with good results. Only real question marks were the banner-image that was too big and creates an excessive load time, will have to do something about it and contrast between the 'contact'-link and the background, when the page loads with the overlay transparency. ![](assets/images/forREADME/lighthouseReport.PNG)
+    - There are 6 functions in this file.
+
+    - Function with the largest signature take 1 arguments, while the median is 0.5.
+
+    - Largest function has 14 statements in it, while the median is 5.5.
+
+    - The most complex function has a cyclomatic complexity value of 3 while the median is 1.5.
+
+    Also says one unused variable, line 63, but it's used in the HTML with 'onclick'. 
+
+
+
+- [Lighthouse via pagespeed ](https://pagespeed.web.dev/) - tested my project through Lighthouse with good results. Only real question marks were the banner-image that was too big and creates an excessive load time, image is now more compressed and contrast between the 'contact'-link and the background, when the page loads with the overlay transparency. ![](assets/images/forREADME/lighthouseReport.PNG)
 
 ### Debugging
     A bug that appeared that I discoved was when changing all the innerHTML to innerText. This made my buttons not display images and it took a little time but after a while I got it and changed it back. Why I changed it in the first case is because I heard/read something about XSS attacks. Most changes could stay but on the buttons had to go. 
@@ -100,17 +112,22 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 -   The Website was tested on Mozilla Firefox, Google Chrome, and Microsoft Edge. Also on Samsung s10e and Huawei MediaPad T5.
 -   The website was also viewed on a variety of devices from Desktop, Laptop, and phone and pad from the set-up that is available on the developer tools in these browsers. 
 
+### Unfixed errors / possible changes
+
+With some late changes to code I wanted to display the answers to user but with shortage of time I was unable to display the answers and the questions in a fashion that I wanted for the user.  
+For example: instead of Question 1: You answered correct d, What I wanted was: Question 1: Who are the WC title holders? You answered correct, France. 
+
 ## Deployment
 ### GitHub Pages
 
 The project was deployed to GitHub Pages using the following steps...
 
 1. Go to GitHub and locate the [right repository](https://github.com/AwrelH/FootyQuiz)
-2. Go to settings on the menu.  
-3. Click on "Pages" Section.
-4. Under "Source", change the dropdown option from "None" to "main".
+2. Go to "`settings`" on the menu.  
+3. Click on "`Pages`" Section.
+4. Under "`Source`", change the dropdown option from "`None`" to "`main`".
 5. Save the changes and let github do its work.
-6. Within a couple of minutes you page is hosted on github and you get a link above "Source".
+6. Within a couple of minutes you page is hosted on github and you get a link above "`Source`".
 
 ## Credits
 w3school - https://www.w3schools.com/jsref/met_form_reset.asp
