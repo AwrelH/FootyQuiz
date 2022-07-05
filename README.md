@@ -124,6 +124,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 A bug that appeared that I discoved was when changing all the innerHTML to innerText. This made my buttons not display images and it took a little time but after a while I got it and changed it back. Why I changed it in the first case is because I heard/read something about XSS attacks. Most changes could stay but on the buttons had to go. 
 
 ### Tests
+
 -   The Website was tested on Mozilla Firefox, Google Chrome, and Microsoft Edge. Also on Samsung s10e and Huawei MediaPad T5.
 -   The website was also viewed on a variety of devices from Desktop, Laptop, and phone and pad from the set-up that is available on the developer tools in these browsers. 
 
@@ -147,6 +148,7 @@ The project was deployed to GitHub Pages using the following steps...
 ## Credits
 
 ### Code
+
 - Code regarding the form on contact.html is taken from [emailJS], it was added in the HTML as pointed out, tried to move it to the script.js but with less success. (https://www.emailjs.com/docs/tutorial/creating-contact-form/). 
 - Instructions from (https://tutorial.eyehunts.com/js/how-to-press-enter-key-programmatically-in-javascript-example-code/) how to apply keypress. 
 - w3school - https://www.w3schools.com/jsref/met_form_reset.asp - was used to reset the form after informations was sent. 
@@ -160,6 +162,7 @@ The project was deployed to GitHub Pages using the following steps...
 -   google image searches
 
 # Potential future features
+
 - add more themes, for example, league questions, footballer questions, weird football facts and so on.
 - Ability to choose the amount of questions.
 - Shuffle the questions.
@@ -168,5 +171,6 @@ The project was deployed to GitHub Pages using the following steps...
 
 
 ### Acknowledgements
+
 -   Mentors help and advices. 
 
