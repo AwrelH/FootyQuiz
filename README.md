@@ -21,12 +21,14 @@ The goal is to provide a challenging quiz yet entertain the online user.
 
 
 -   ### Design
+
     -   #### Color Scheme
+
         -  the color scheme I have used.
         
         ![](assets/images/forREADME/colors.png)
         
-            I've used the HSL set-up because its efficent way to grade up and down through the colors. Also keep the colors consistent.
+    I've used the HSL set-up because its efficient way to grade up and down through the colors. Also keep the colors consistent.
     -   #### Typography
         -   The font family I've used is Kanita, PT Sans Narrow, Sansita, sans-serif.
     -   #### Imagery
@@ -40,7 +42,8 @@ The goal is to provide a challenging quiz yet entertain the online user.
     -   Mobile Wireframe - [View](assets/images/forREADME/footyQuizMobile.png)
 
 ## The questions
-    The questions are just a creation of imagination with a little bit of googling facts. Some are regarding dates, teams and players. Also there's one random question about an instrument had a big inpact on the stadium environment. 
+
+The questions are just a creation of imagination with a pinch of googling facts. Some are regarding dates, teams and players. Also there's one random question about an instrument that had a big impact on the stadium environment. 
 
 ## Features
  
@@ -117,7 +120,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 - [Color contrast accessibility validator ](https://color.a11y.com/) - Was also used just to see if color contrast was an [issue](assets/images/forREADME/colorcontrastissue.PNG). And it declared an issue with the title. But I am not sure if it's accurate because I have an image in the background. Additional the title have a text-shadow property that is not recognized. 
 
 ### Debugging
-    A bug that appeared that I discoved was when changing all the innerHTML to innerText. This made my buttons not display images and it took a little time but after a while I got it and changed it back. Why I changed it in the first case is because I heard/read something about XSS attacks. Most changes could stay but on the buttons had to go. 
+
+A bug that appeared that I discoved was when changing all the innerHTML to innerText. This made my buttons not display images and it took a little time but after a while I got it and changed it back. Why I changed it in the first case is because I heard/read something about XSS attacks. Most changes could stay but on the buttons had to go. 
 
 ### Tests
 -   The Website was tested on Mozilla Firefox, Google Chrome, and Microsoft Edge. Also on Samsung s10e and Huawei MediaPad T5.
@@ -134,16 +138,16 @@ For example: instead of Question 1: You answered correct d, What I wanted was: Q
 The project was deployed to GitHub Pages using the following steps...
 
 1. Go to GitHub and locate the [right repository](https://github.com/AwrelH/FootyQuiz)
-2. Go to "`settings`" on the menu.  
-3. Click on "`Pages`" Section.
-4. Under "`Source`", change the dropdown option from "`None`" to "`main`".
+2. Go to `settings` on the menu.  
+3. Click on `Pages` Section.
+4. Under `Source`, change the dropdown option from `None` to `main`.
 5. Save the changes and let github do its work.
-6. Within a couple of minutes you page is hosted on github and you get a link above "`Source`".
+6. Within a couple of minutes you page is hosted on github and you get a link above `Source`.
 
 ## Credits
 
 ### Code
-- Code regarding the form on contact.html is taken from [emailJS](https://www.emailjs.com/docs/tutorial/creating-contact-form/). 
+- Code regarding the form on contact.html is taken from [emailJS], it was added in the HTML as pointed out, tried to move it to the script.js but with less success. (https://www.emailjs.com/docs/tutorial/creating-contact-form/). 
 - Instructions from (https://tutorial.eyehunts.com/js/how-to-press-enter-key-programmatically-in-javascript-example-code/) how to apply keypress. 
 - w3school - https://www.w3schools.com/jsref/met_form_reset.asp - was used to reset the form after informations was sent. 
 
@@ -157,10 +161,12 @@ The project was deployed to GitHub Pages using the following steps...
 
 # Potential future features
 - add more themes, for example, league questions, footballer questions, weird football facts and so on.
+- Ability to choose the amount of questions.
+- Shuffle the questions.
 - Give the page animations.
 - High score possibilities.
 
 
 ### Acknowledgements
--   Mentors help and advices
+-   Mentors help and advices. 
 
