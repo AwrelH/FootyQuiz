@@ -22,7 +22,7 @@ let addInput = document.createElement("input");
 addInput.setAttribute("placeholder", "Type your player name");
 addInput.setAttribute("required", "");
 addInput.id = "addName";
-// instructions and code from below to assign enter-button
+// instructions and code from below to assign enter-key
 //https://tutorial.eyehunts.com/js/how-to-press-enter-key-programmatically-in-javascript-example-code/
 //
 addInput.onkeydown = function (e) {
@@ -30,7 +30,7 @@ addInput.onkeydown = function (e) {
     welcome();
   }
 };
-
+//APPEND three elements into myParagraph
 myParagraph.append(myParagraphText, addInput, myIntroButton);
 
 //APPEND to the empty div
@@ -44,7 +44,7 @@ introButton.addEventListener("click", welcome);
 let i = 0;
 let right = 0;
 let wrong = 0;
-
+//startgame function
 function startGame(question) {
   let option1 = question.answers.a;
   let option2 = question.answers.b;
@@ -57,42 +57,39 @@ function startGame(question) {
   document.getElementById("optionC").innerHTML = option3;
   document.getElementById("optionD").innerHTML = option4;
 }
-
+//the control of answers function
 function answered(option) {
   let correct = questions[i].correctAnswer;
   if (correct === option) {
-    console.log("thats right");
-    right++;
+     right++;
     document.getElementById("rightAnswers").innerText = right;
     collectAnswers.push(
       `<li><b>question:${[i + 1]}</b> You answered correct  ${correct} </li>`
-    );
+    ); //pushing answered call into empty array that will be displayed later
   } else {
     wrong++;
     document.getElementById("wrongAnswers").innerText = wrong;
     collectAnswers.push(
       `<li><b>question:${[i + 1]}</b> The correct answer is  ${correct} </li>`
-    );
+    );//pushing answered call into empty array that will be displayed later
   }
   i++;
   // if not the end of the game onto the next question
   if (i < 10) {
     startGame(questions[i]);
   } else {
-    console.log("end of game");
     // call a function that gives end of game message
     endGame();
   }
 }
-
+//The endgame function
 function endGame() {
   document.getElementById("answerContainer").style.display = "none";
   //removes the absolute position from the h2 element and keeps score boxes below and not under it
   //when removing display
   document.getElementById("question").style.position = "initial";
-  document.getElementById(
-    "question"
-  ).innerText = `You have reached the end of the game and you got ${right} correct answer(s)`;
+  document.getElementById("question").innerText = 
+  `You have reached the end of the game and you got ${right} correct answer(s)`;
   revealAnswers();
 }
 
@@ -201,7 +198,7 @@ const questions = [
     correctAnswer: "a",
   },
 ];
-
+//the welcome function and within it the startGame function
 function welcome() {
   document.getElementById("myDiv").style.display = "none";
   startGame(questions[i]);
@@ -210,10 +207,9 @@ function welcome() {
   if (typedName.value === "") {
     typedName = "Player";
     document.getElementById("playerName").innerText = typedName;
-  }
-
-  //pushes answers to array and with join() the array will be printed in p element
+  } 
 }
+//pushes answers to array and with join() the array will be printed in p element with id "theAnswers"
 let collectAnswers = [];
 collectAnswers.join(" ");
 
