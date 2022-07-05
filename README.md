@@ -18,7 +18,7 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
 
 The goal is to provide a challenging quiz yet entertain the online user. 
 
-### Initial 
+
 
 -   ### Design
     -   #### Color Scheme
@@ -35,7 +35,7 @@ The goal is to provide a challenging quiz yet entertain the online user.
         -   I created two different CSS files to separate them because some of it was a not needed in contact.html and gave a better workflow. 
 *   ### Wireframes
 
-    -   Home Page Wireframe - [View](assets/images/forREADME/footyQuizDesktop.png), clearly some changes that came along the project, removing of the highscore and suggestion textarea. Suggestion is added in separate page.
+    -   Home Page Wireframe - [View](assets/images/forREADME/footyQuizDesktop.png), clearly some changes that came along the project, removing of the highscore and suggestion textarea. Suggestion is added in separate page. It was a mobile first approach since my initial thought was having images to click on. Still some imagery but not in the same sense. 
 
     -   Mobile Wireframe - [View](assets/images/forREADME/footyQuizMobile.png)
 
