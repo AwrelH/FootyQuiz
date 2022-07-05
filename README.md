@@ -8,12 +8,17 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
 
 ## User Experience (UX)
 
--   ### User story
+
+-   ### User story/goal
 
     As a user I want to play a quiz that is straight forward. 
     This is the question and those are the alternatives. I want to see how I progress while playing and at some point the game will let me know that the game if finished. I want to be challenged with questions that regards football and hopefully learn something. 
 
+- ### Site owner's goal
 
+The goal is to provide a challenging quiz yet entertain the online user. 
+
+### Initial 
 
 -   ### Design
     -   #### Color Scheme
@@ -21,7 +26,7 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
         
         ![](assets/images/forREADME/colors.png)
         
-            I've used the HSL set-up because its efficent way to grade up and down through the colors. 
+            I've used the HSL set-up because its efficent way to grade up and down through the colors. Also keep the colors consistent.
     -   #### Typography
         -   The font family I've used is Kanita, PT Sans Narrow, Sansita, sans-serif.
     -   #### Imagery
@@ -57,7 +62,7 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
 
 - It's also possible for user to contact creator via link that is in the footer. 
 
--   The contact page is very straight forward, a form with name and textarea and a submit-button. And you are able to return to quiz-page when clicking on the link in the banner. The submit button changes value when pushed to 'sending...' and an alert message appears when message has been sent. When clicking it you will have an empty form.
+-   The contact page is very straight forward, a form with name and textarea and a submit-button. And you are able to return to quiz-page when clicking on the link in the banner. The submit button changes value when pushed to 'sending...' and an alert message appears when message has been sent. When clicking it you will have an empty form.   
 ![Contactpage](assets/images/forREADME/contactpage.PNG)
 
 
@@ -81,6 +86,9 @@ This is the smallest football quiz for the fans of the biggest sport in the worl
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the start of project.
 
+1. Windows Snippet tool
+    - Was used to snippet images to readme.md
+
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate the pages of the project and make sure code is correct. Also JSHint was used to validate the JavaScript. And Chrome Lighthouse devtool was used as well.
@@ -103,7 +111,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 
 
-- [Lighthouse via pagespeed ](https://pagespeed.web.dev/) - tested my project through Lighthouse with good results. Only real question marks were the banner-image that was too big and creates an excessive load time, image is now more compressed and contrast between the 'contact'-link and the background, when the page loads with the overlay transparency. ![](assets/images/forREADME/lighthouseReport.PNG)
+- [Lighthouse via pagespeed ](https://pagespeed.web.dev/) - tested my project through Lighthouse with good results. Only real question marks were the banner-image that was too big and creates an excessive load time, image is now more compressed and contrast between the 'contact'-link and the background, when the page loads with the overlay transparency.
+ ![](assets/images/forREADME/lighthouseReport.PNG)
+
+- [Color contrast accessibility validator ](https://color.a11y.com/) - Was also used just to see if color contrast was an [issue](assets/images/forREADME/colorcontrastissue.PNG). And it declared an issue with the title. But I am not sure if it's accurate because I have an image in the background. Additional the title have a text-shadow property that is not recognized. 
 
 ### Debugging
     A bug that appeared that I discoved was when changing all the innerHTML to innerText. This made my buttons not display images and it took a little time but after a while I got it and changed it back. Why I changed it in the first case is because I heard/read something about XSS attacks. Most changes could stay but on the buttons had to go. 
@@ -130,11 +141,11 @@ The project was deployed to GitHub Pages using the following steps...
 6. Within a couple of minutes you page is hosted on github and you get a link above "`Source`".
 
 ## Credits
-w3school - https://www.w3schools.com/jsref/met_form_reset.asp
 
 ### Code
 - Code regarding the form on contact.html is taken from [emailJS](https://www.emailjs.com/docs/tutorial/creating-contact-form/). 
 - Instructions from (https://tutorial.eyehunts.com/js/how-to-press-enter-key-programmatically-in-javascript-example-code/) how to apply keypress. 
+- w3school - https://www.w3schools.com/jsref/met_form_reset.asp - was used to reset the form after informations was sent. 
 
 
 ### Media
@@ -144,12 +155,12 @@ w3school - https://www.w3schools.com/jsref/met_form_reset.asp
 -   https://coolors.co/ were used to make a palette for my readme.
 -   google image searches
 
-# Future features
+# Potential future features
 - add more themes, for example, league questions, footballer questions, weird football facts and so on.
 - Give the page animations.
 - High score possibilities.
 
 
 ### Acknowledgements
--   Mentors help and advice
+-   Mentors help and advices
 
